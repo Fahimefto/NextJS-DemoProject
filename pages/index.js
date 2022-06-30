@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="keywords" content="donations" />
       </Head>
       <div>
-        <h1>This is a Homepage</h1>
+        <h1>Homepage</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
           labore nulla tempore eius iure cum perferendis nostrum, sequi id quae
