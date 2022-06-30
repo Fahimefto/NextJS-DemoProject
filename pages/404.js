@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { UseRouter } from "next/router";
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 const NotFound = () => {
-  const Router = UseRouter();
+  const Router = useRouter();
   useEffect(() => {
     setTimeout(() => {
       Router.push("/");
