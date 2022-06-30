@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import classes from "../../styles/Index.module.css";
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -19,13 +20,14 @@ const Donor = ({ donors }) => {
       <div>
         <h1>Donorlist</h1>
         {donors.map((donor) => (
-          <div key={donor.id}>
+          <Link href={"/donor/" + donor.id} key={donor.id}>
             <a className={classes.card}>
+              <h4>{donor.id}</h4>
               <h4>{donor.name}</h4>
               <h5>Email : {donor.email}</h5>
               <p>Adress : {donor.address.street}</p>
             </a>
-          </div>
+          </Link>
         ))}
       </div>
     </>
