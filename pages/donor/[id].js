@@ -19,18 +19,18 @@ export const getStaticProps = async (context) => {
   const data1 = await res.json();
 
   return {
-    props: { donors: data1 },
+    props: { donor: data1 },
   };
 };
 
-const Details = ({ donors }) => {
+const Details = ({ donor }) => {
   return (
     <div>
-      <h2>Details of this Donors</h2>
-      <h2>{donors.name}</h2>
-      <h5>Email : {donors.email}</h5>
-      <h5>website : {donors.website}</h5>
-      <h5>City : {donors.address.city}</h5>
+      <h2>Details of this Donor</h2>
+      <h2>{donor.name}</h2>
+      <h5>Email : {donor.email}</h5>
+      <h5>website : {donor.website}</h5>
+      <h5>City : {donor.address.city}</h5>
     </div>
   );
 };
